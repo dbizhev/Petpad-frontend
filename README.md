@@ -1,68 +1,37 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Pet Pad
 
-## Available Scripts
+## Set Up Front End
 
-In the project directory, you can run:
+### Introduction
+As there's so much to cover, we are going to break this down into stages.
 
-### `yarn start`
+### Coding style & conventions
+This project front end uses [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/).
+The front end style config files have been trialed and tested so sticking to them makes for great conventions and best practices throughout the code.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+For IDEs like WebStorm and PyCharm, you can go to `Preferences | Tools | File Watchers` and add automatic watchers for ESLint and Prettier on any files you choose. Upon pressing save the watchers will auto-lint your changes for ease of use.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Getting Started
+#### Setup Front End
+The front end uses `Yarn` as it's package manager. Navigate to the frontend directory and use `yarn` to install the dependencies in the `package.json` file. This will generate a `yarn.lock` file. It's advisable to commit this file as and when it is updated.
 
-### `yarn test`
+Once the dependencies are installed, run `yarn start` to run the front end on `port 3000`.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Tech Stack
+The front end for this project is built in React and React Router with all components built from scratch; relying on no UI library like Bootstrap or Material UI.
+ 
+#### Mobile-First
+This client-side project was built primarily on mobile view. Try `Responsive 375 x 639` on `Developer Tools mobile mode` for an optimal mobile-first experience. In addition, this project uses `Flexbox` to appropriately respond to `Desktop resolutions`.
 
-### `yarn build`
+#### Personalised experience
+Throughout the app, we refer to the pet by it's actual name. The app even provides the pet with a personal assistant; but the pet's user must be an authenticated premium user. In addition, any posts written on the pet's birthday will be flagged with a little cake icon and will wish the pet a happy birthday. `Try setting its birthday to today to view this little feature.`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+#### Features
+The main features of this application are:
+- `Homepage`: From here pet owners are greeted with the front face of the app, with a button allowing them to register for free. When the user is authenticated they will be able to see a hamburger icon to open other features of the app
+- `Auth0 authorisation screen`: Pet owners will come here from the homepage registration button; where they must authenticate to proceed
+- `Registration form`: Pet owners here will register their pet across two screens; providing it's basic details like gender, name, height, and weight. The form uses strict Regex pattern matching and required fields to prevent erroneous data or lack thereof.
+- `Pet Profile`: Pet owners can amend and add further details about their pet, including their own personal picture (`which must be an image, no greater than 2MB`)
+- `Pet Pad`: Pet owners can keep a daily journal about their pet's mood and activities, which are timestamped by date created and date last modified
+- `Pet History`: Pet owners can see a log of all their journal entries here, and can freely delete and amend them if they are Premium Users
+- `Pet Assistant`: A Premium User-only feature for Pet owners to recieve intelligent feedback from the pet's personal assistant, covering feedback on their mood, their weight, and their personality

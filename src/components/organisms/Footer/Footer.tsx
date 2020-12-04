@@ -51,7 +51,7 @@ const Footer = () => {
                 <div>
                     <a
                         className="footer-link"
-                        href="https://github.com/MisterEmpyrean/PetPadFrontend"
+                        href="https://github.com/dbizhev/Petpad-frontend"
                         target="_blank"
                         rel="noopener noreferrer">
                         GitHub FE
@@ -65,7 +65,7 @@ const Footer = () => {
                     </a>
                     <a
                         className="footer-link"
-                        href="https://github.com/MisterEmpyrean/PetPadBackend"
+                        href="https://github.com/dbizhev/Petpad-backend"
                         target="_blank"
                         rel="noopener noreferrer">
                         GitHub BE
